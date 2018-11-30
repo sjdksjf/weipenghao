@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <title>小程序开发_微信小程序开发_深圳小程序开发公司_小程序开发公司_小程序定制公司_野石头科技</title>
+  <meta name="Keywords" content="小程序开发,微信小程序开发,深圳小程序开发公司,小程序开发公司,小程序定制公司">
+  <meta name="description" content="野石头科技是一家小程序开发、小程序定制、开发于一体的综合性国家高新技术企业。服务行业电商、餐饮、汽车、房产、婚庆、商超、快消、银行、影楼等行业的微信小程序开发、定制等系列。野石头科技彻底解决企业在微信上搜不到和不被信任的难题.咨询热线:13926521670">
+  <link rel="shortcut icon" href="assets/images/logo.ico">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+	<div class="header-wrapper">
+	  <div class="header-top">
+	    <div class="w">
+	      <a href="/" class="logo-w">
+	        <img class="img-w" src="assets/images/1_1.png" alt="首页">
+	      </a>
+	      <div class="header-top-txt">专注小程序开发、定制专家</div>
+	      <div class="hot-tel fr">
+	        <span class="phone-icon">咨询</span><b>服务热线：</b><span>17688549448</span>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="header">
+	    <div class="w">
+	      <ul class="nav-ul">
+	        <li class="nav-item "><a href="index.html">首页</a></li>
+	        <li class="nav-item "><a href="case.html">客户案例</a></li>
+	        <li class="nav-item on"><a href="news.html">新闻中心</a></li>
+	        <li class="nav-item "><a href="about.html">关于我们</a></li>
+	        <li class="nav-item "><a href="contact.html">联系我们</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+	<div class="fang-banner mar"></div>
+	<div class="bgw">&nbsp;
+		<div class="w">
+			<div class="news-wrapper">
+				<div class="newsnav-w">
+					<a href="news.html" class="newsnav on">公司新闻</a>
+					<!-- <a href="news1.html" class="newsnav ">行业新闻</a> -->
+				</div>
+				<ul class="news-ul" id="newsID"></ul>
+				<div class="pagelist"></div>
+			</div>
+		</div>&nbsp;
+	</div>
+	<div class="footer">
+		<!--客服-->
+		<!-- <div class="kefumain" style="display: none;">
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=376056814&site=qq&menu=yes" class="a1">QQ咨询</a>
+			<a href="javascript:void(0)" class="a3">电话咨询</a>
+			<a href="javascript:void(0)" class="a4">返回顶部</a>
+			<div class="footdh">
+				13926521670		</div>
+		</div> -->
+		<div class="w clearfix">
+	 		<div class="footer-l fl">
+	 			<div class="footer-l-1">
+	 				<ul class="clearfix">
+	 					<!-- <li><a href="/index.php/products" class="bd0">产品中心</a></li> -->
+	 					<li><a href="/index.php/case" class="bd0">客户案例</a></li>
+	 					<li><a href="/index.php/news">新闻中心</a></li>
+	 					<li><a href="/index.php/about">关于我们</a></li>
+						<li><a href="/index.php/contact">联系我们</a></li>
+	 				</ul>
+	 			</div>
+	 			<div class="footer-l-2">
+	 				<p>版权所有 © 2014-2017 深圳市野石头科技有限公司   Copyringht © 1999-2017 300.cn All Rights Reserved</p>
+	 				<a href="http://www.miitbeian.gov.cn" target="_blank"><p>粤ICP备16014529号</p></a>
+	 			</div>
+	 		</div>
+	 		<div class="footer-r fr clearfix">
+	 			<div class="footer-r-1 fr">
+	 				<img src="assets/images/20180317100248_874.png" width="90" height="90" alt="">
+	 				<p>官方微信</p>
+	 			</div>
+	 			<div class="footer-r-1 fr">
+	 				<img src="assets/images/20180315182049_397.jpeg" width="90" height="90" alt="">
+	 				<p>官方微博</p>
+	 			</div>
+	 		</div>
+		</div>
+	</div>
+	<script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="assets/js/ajax.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script>
+		window.onload = function(){
+			$.get(domain+"index.php/index/index2/article_list", function(data){
+			 	console.log(data.data)
+			 	var str = '';
+			 	for (var i = 0; i < data.data.length; i++) {
+			 		
+			 		console.log(data.data[i])
+			 		str+='<li class="news-item">';
+					str+='<a  href="news1.html?id='+data.data[i].article_id+'" title="'+data.data[i].title+'">';
+					str+='<div class="news-item-l" style="background-image:url('+data.data[i].thumb+')"></div>';
+					str+='<div class="news-item-r">';
+					str+='<h3 class="ell news-tit">'+data.data[i].title+'</h3>';
+					str+='<p class="news-intro">'+data.data[i].description+'</p>';
+					str+='<p class="news-date">'+data.data[i].add_time+'</p>';
+					str+='</div>';
+					str+='</a>';
+					str+='</li>';
+			 	}
+			 	$('#newsID').append(str);
+			});
+		}
+	</script>
+	<script language="javascript">
+	if(document.all || document.getElementById)
+	{
+		document.write('<span id="LR_User_Icon0" class="abcc"></span>');
+	}
+	else if(document.layers)
+	{
+		document.write('<layer name="LR_User_Icon0"></layer>');
+	}
+	</script>
+
+	<script language="javascript" src="http://kht.zoosnet.net/JS/LsJS.aspx?siteid=KHT96103416&lng=cn"></script>
+	<script language="javascript">
+	if(typeof(LiveReceptionCode_isonline)!='undefined'  && LR_GetObj('LR_User_Icon0')!=null)
+	{
+		if(LiveReceptionCode_isonline)
+			LR_GetObj('LR_User_Icon0').innerHTML='<a '+LiveReceptionCode_BuildChatWin('在线咨询','客服人员在线,欢迎点击咨询')+'><img src="http://kht.zoosnet.net/lr/images/online_cn35.gif" border="0"></a>';
+		else
+			LR_GetObj('LR_User_Icon0').innerHTML='<a '+LiveReceptionCode_BuildChatWin('在线咨询','客服人员不在线,请点击留言')+'><img src="http://kht.zoosnet.net/lr/images/offline_cn3.gif" border="0"></a>';
+	}
+	</script>
+
+
+</body>
+</html>

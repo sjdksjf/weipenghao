@@ -1,0 +1,30 @@
+<!--pages/classification/classlist.wxml-->
+<view class='class_container'>
+<!-- <view class='class_head'>
+<image src='../binding/images/back.png' bindtap='back_home'></image>
+</view> -->
+<view class='classsort'>
+<text class='{{listnum=="综合"?"colorred":""}}' data-num='综合' bindtap='changelistnum'>综合</text>
+<text class='{{listnum=="销量"?"colorred":""}}' data-num='销量' bindtap='changelistnum'>销量</text>
+<text class='{{listnum=="新品"?"colorred":""}}' data-num='新品' bindtap='changelistnum'>新品</text>
+<text class='{{listnum=="价格"?"colorred":""}}' data-num='价格' bindtap='changelistnum'>{{price_name}}</text>
+<view class='price_num' hidden='{{price_bool}}'>
+<text bindtap='high'>价格升序</text>
+<text bindtap='low'>价格降序</text>
+</view>
+</view>
+<view class='like_box'>
+<view class='the_shangpingtishi'wx:if="{{ahhhhhhh}}">
+<image src='http://qn.yeshitou.com/no_orderinfo.png'></image>
+<text>该商品类型暂时未上架</text>
+</view>
+<view class='guess_like' wx:if="{{!ahhhhhhh}}">
+<view wx:for="{{classlist}}" bindtap='jumpdetail' data-detail='{{item.goods_id}}'> 
+<image src='{{item.original_img}}'></image>
+<view class='goodsname'><text>{{item.goods_name}}</text></view>
+<view class='goodsprice'><text>¥{{item.shop_price}}</text><text>¥{{item.market_price}}</text></view>
+</view>
+</view>
+</view>
+
+</view>

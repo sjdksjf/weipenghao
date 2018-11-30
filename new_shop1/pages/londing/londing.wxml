@@ -1,0 +1,18 @@
+<!--pages/londing/londing.wxml-->
+
+<view>
+    <view class='header'>
+        <image src='/images/wx_login.png'></image>
+    </view>
+ 
+    <view class='content'>
+        <image src='./images/logo.png'></image>
+        <view class='text1'> 恒创物联售货机</view>
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        微信授权登录
+        </button>
+    </view>
+ 
+   
+</view>
+

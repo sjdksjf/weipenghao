@@ -1,0 +1,131 @@
+<!--pages/order/order.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<scroll-view class='order_container' scroll-y="{{true}}"bindscroll="thetop" scroll-with-animation="{{true}}" scroll-into-view='{{ceshi_jump}}'>
+<view class='theout'>
+
+<swiper class='order_carousel'  autoplay="{{true}}" circular="{{true}}"indicator-dots = "{{true}}" >
+<swiper-item wx:for="{{goodsuserchoose.imgs}}" wx:key="{{index}}" current="{{current}}" ><image src='{{item.image_url}}'/> </swiper-item>
+</swiper>
+<view class='goodsnamebox'>
+<view class='goodsname' animation="{{sssss}}">
+<text>{{goodsuserchoose.goods_name}}</text>
+<text>
+<text class='theRMB'>¥</text>
+<text class='less'>{{goodsuserchoose.shop_price}}</text>
+<text class='more'>¥{{goodsuserchoose.market_price}}</text>
+</text>
+</view>
+<view class='order_prompt' bindtap='change_prompt'>
+<text>不支持无理由退货</text>
+<text>48小时发货</text>
+</view>
+</view>
+<!--物品的规格  -->
+<view class='choose_rule'  bindtap='change_rule'>
+<view wx:if="{{!isselectedItem}}">请选择:<text wx:for="{{options}}" >{{item.title}}</text></view>
+<view wx:if="{{isselectedItem}}">已选择<text wx:for="{{options}}" class='hehehehe'>'{{item.selectedItem}}'</text></view>
+</view>
+<!--详细底部  -->
+<view class='order_foot'>
+<view class='order_collect' bindtap='collect_goods'><image src='{{goodsuserchoose.collect==0?"images/0.png":"images/1.png"}}'></image>收藏</view>
+<view class='order_shop' bindtap='post_msgtype'>
+<contact-button session-from="weapp" class='the_weapp'></contact-button>
+<image src='http://qn.yeshitou.com/kefu.png'></image>客服
+</view>
+<view class='order_add' bindtap='addshopcar'>加入购物车</view>
+<view class='order_pay' bindtap='buy_now'>立即购买</view>
+</view>
+
+<!--用于用户提示的蒙版  -->
+<view class='prompt_mask'hidden='{{prompt_bool}}' bindtap='down_prompt'>
+<view class='prompt_word' animation="{{animationData}}"catchtap='hhh' >
+<text>服务说明</text>
+<text>不支持无理由退货</text>
+<text>48小时发货</text>
+</view>
+</view>
+
+<!--用于展现优惠活动  -->
+ <!-- <view class='preferential'>
+<view class='perferential_title'>优惠活动</view>
+<view class='perferential_class'>
+<contact-button session-from="weapp"><text>咨询</text></contact-button>
+</view>
+</view>  -->
+
+<!--用于展示商品的详细数据  -->
+<view class='thethree'>
+<view class="{{nav_bool?'thenav thenav1':'thenav'}}">
+<view class='navname' bindtap='pic_scroll'>图文详情</view>
+<view class='navname' bindtap='data_scroll'>商品参数</view>
+<view class='navname' bindtap='recommend_scroll'>商品评论</view>
+<view class='navscroll {{scroll}}'></view>
+</view>
+<view class='pic_detail' id='pic_detail'>
+ <template is="wxParse" data="{{wxParseData:content111.nodes}}"/> 
+<!-- <rich-text nodes="{{nodes}}"></rich-text> -->
+</view>
+<view class='data_detail' id='data_detail'>
+<view wx:for="{{goods_attr.goods_attr}}">
+<text>{{item.attr_name}}</text>
+<text>{{item.attr_value}}</text>
+</view>
+</view>
+<view class='recommend_detail' id='recommend_detail'>
+<!--用于显示评论的  -->
+<view class='order_comments'>
+<view class='comments_title'>
+商品评价
+</view>
+<view class='comments_list' wx:for="{{order_comments}}">
+<view class='comments_listname'><image src='{{item.head_pic}}'></image>
+<text>{{item.nickname}}</text></view>
+<view class='comments_content'>{{item.content}}</view>
+</view></view>
+</view>
+
+</view>
+<!--用于列举商品详情的蒙版  -->
+<view class='rule_mask' hidden='{{rule_bool}}' bindtap='down_rule'>
+
+<view class='goodsrule'animation="{{animationRule}}" catchtap='hhh' >
+<image src='{{goodsuserchoose.imgs[0].image_url}}'></image>
+
+<view class='goodsrule_repertory'>
+<text><text>¥</text>{{goodsprice}}</text>
+<text>库存:{{goodsstore}}</text>
+<view>
+<view wx:if="{{!isselectedItem}}">请选择:<text wx:for="{{options}}" >{{item.title}}</text></view>
+<view wx:if="{{isselectedItem}}">已选择<text wx:for="{{options}}" class='hehehehe'>'{{item.selectedItem}}'</text></view>
+</view>
+</view>
+<view class='scrollrule'>
+<view>
+<view class='manyrule'>
+<view wx:for="{{options}}" class='manyrule1' wx:for-index="optionIndex">
+<text>{{item.title}}:</text>
+<view wx:for="{{item.items}}" wx:for-item ="smallitem"data-small='{{index}}' data-big='{{optionIndex}}' class="{{item.selectedItemId == smallitem.item_id?'red': ''}}" bindtap='changeuserrule'>{{smallitem.item}}</view>
+</view>
+</view>
+ <view class='addnum'>
+ <text>数量:</text>
+ <view class='showchangenum'>
+ <view class='minus' bindtap='changenumreduce' >
+  <image src="{{goodscommitnum == 1?'images/minus.png':'images/minus1.png'}}"></image>
+ <!-- <image src='images/minus.png'hidden='{{? true: false}}' ></image>  -->
+ </view>
+ <text class='shownum'>{{goodscommitnum}}</text>
+  <view class='max' bindtap='changenumadd'><image src='images/add.png'></image></view> 
+ </view>
+ </view>
+ </view>
+
+ </view>
+<view class='rulefoot'>
+<view bindtap='addshopcar1'>加入购物车</view>
+<view bindtap='buy_now1'>立即购买</view>
+</view>
+</view>
+</view>
+</view>
+</scroll-view>

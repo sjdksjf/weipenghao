@@ -1,0 +1,299 @@
+/* pages/classification/classification.wxss */
+.class_container{
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+/*分类中的搜索框  */
+.home_search{
+  margin-top: 20rpx;
+  width: 90%;
+   margin-left: 5%; 
+  height: 60rpx;
+  font-size: 30rpx;
+   z-index: 100;
+   margin-bottom: 24rpx;
+   background-color: rgba(155, 155, 155, 0.5) ;     
+   position: relative;
+}
+.home_search input{
+  height: 100%;
+  width:92%;
+  padding-left: 12%;
+  color: white;
+}
+.home_search image{
+  position: absolute;
+  top: 5rpx;
+  left: 2%;
+  width: 50rpx;
+  height: 50rpx;
+}
+/*分类的容器  */
+.classify_all{
+  height: 1100rpx;
+  margin-top: 30rpx;
+}
+/*分类左侧  */
+.classify_left{
+  width: 180rpx;
+  overflow: hidden;
+  height: 100%;
+  background-color: #eef3fa;
+  float: left;
+}
+.classify_left view {
+  height: 100rpx;
+  line-height: 112rpx;
+  position: relative;
+  font-size: 30rpx;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+   text-overflow: ellipsis;
+}
+.view_left::after{
+  content: '';
+  position: absolute;
+  height: 48rpx;
+  width: 10rpx;
+  left: 0;
+  top: 36rpx;
+  background-color: #4fb06e;
+}
+.viewleft1{
+  background-color: white;
+  color: #4fb06e;
+  
+}
+/*分类右侧  */
+.classify_right{
+  width: 558rpx;
+  float: left;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.classify_right .viex1{
+  width: 558rpx;
+  margin-right: 6rpx;
+  height: 188rpx;
+  margin-bottom: 10rpx;
+  float: left;
+  overflow: hidden;
+  box-shadow:0 0 5rpx #e3e3e3;
+  position: relative;
+}
+.classify_right view image{
+  display: block;
+  width: 150rpx;
+  margin-left: 16rpx;
+  height: 150rpx;
+  margin-bottom: 8rpx;
+  margin-top: 17rpx;
+  border-radius:10rpx;
+}
+.classify_right .name_price{
+  width: 150rpx;
+  height: 150rpx;
+  position: relative;
+  top: -150rpx;
+  left: 180rpx;
+}
+.classify_right view .text1{
+  width: 100%;
+  height: 60rpx;
+  color: #333;
+  overflow: hidden;
+  font-size: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.classify_right view .text2{
+  width: 200rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 90rpx;
+  left: 0rpx;
+  color: red;
+  overflow: hidden;
+  font-size: 28rpx;
+  font-weight: 800;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.add_minus{
+  height:70rpx;
+  width:160rpx;
+  position:absolute;
+  top:65rpx;
+  right:40rpx;
+}
+.add_minus .img1{
+  height: 50rpx;
+  width: 50rpx;
+  float: right;
+  background-color: #4fb06e;
+  border-radius: 50%;
+  text-align: center;
+  font-size:50rpx;
+  line-height:40rpx;
+  color: white;
+}
+.add_minus .img2{
+  height: 50rpx;
+  width: 50rpx;
+  float: left;
+  background-color: #4fb06e;
+  border-radius: 50%;
+  text-align: center;
+  font-size:50rpx;
+  line-height:40rpx;
+  color: white;
+}
+.add_minus text{
+  height: 30rpx;
+  width: 33rpx;
+  font-size: 30rpx;
+  margin-left: 10px;
+  font-weight: 800;
+}
+/*底部购物车信息*/
+.foot_buy{
+  height: 100rpx;
+  width: 100%;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0rpx;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 5rpx #999;
+}
+.foot_buy .img3{
+  height: 47rpx;
+  width: 47rpx;
+  margin-top: 22rpx;
+  margin-left: 20rpx;
+}
+.foot_buy .text3{
+  height: 50rpx;
+  width: 56rpx;
+  margin-top: 22rpx;
+  margin-left: 20rpx;
+  margin-right: 50rpx;
+  color: red;
+  font-weight:800;
+}
+.foot_buy .text4{
+  color: #555;
+}
+.foot_buy .btn{
+  height: 100%;
+  width: 30%;
+  float: right;
+  font-size: 36rpx;
+  color: white;
+  background-color:#4fb06e;
+}
+.foot_buy .shopping_cart{
+  height: 100%;
+  width: 70%;
+  float: left;
+}
+
+/*蒙版数据*/
+.text5{
+  color: rgba(0, 0, 0,0.8);
+  font-size: 18px;
+  margin-left: 10px;
+}
+.text6{
+  color: red;
+  font-size: 13px;
+  margin-left: 30px;
+  font-weight: 800;
+}
+.class_container1{
+  height: 90%;
+  width: 100%;
+  background-color:rgba(155, 155, 155, 0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  z-index: 2px;
+}
+.foot_list{
+  width: 100%;
+  position: fixed;
+  bottom:82rpx;
+  margin-bottom: 2px solid #e3e3e3;
+  z-index: 999;
+}
+ .view2{
+  height: 50px;
+  width: 100%;
+}
+.all_left{
+  width: 38%;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+.all_senter{
+  width: 30%;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+.foot_list .all_right{
+  width: 30%;
+  height: 50px;
+  line-height: 50px;
+  float: right;
+}
+/*商品是否在购物车显示*/
+.listBlock{
+  display: block;
+}
+.listNone{
+  display: none;
+}
+
+/*列表加减号样式*/
+.foot_text1{
+  height:50rpx;
+  width:50rpx;
+  line-height:41rpx;
+  font-size:30px;
+  margin-top:14px;
+  float:left;
+  color:white;
+  border-radius:50%;
+  margin:21rpx auto;
+  text-align:center;
+  font-weight:700;
+  background-color: #4fb06e;
+}
+.foot_text3{
+  height:15px;
+  width:15px;
+  line-height:11px;
+  font-size:15px;
+  margin-top:16px;
+  float: left;
+  margin-left: 10%;
+}
+.foot_text2{
+  height:50rpx;
+  width:50rpx;
+  line-height:41rpx;
+  font-size:30px;
+  margin-top:14px;
+  float:right;
+  color:white;
+  border-radius:50%;
+  margin:21rpx auto;
+  text-align:center;
+  font-weight:700;
+  background-color: #4fb06e;
+  margin-right:50rpx;
+}

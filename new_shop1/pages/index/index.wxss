@@ -1,0 +1,441 @@
+/**index.wxss**/
+page{
+  height: 100%;
+  width:100%;
+}
+.container_home{
+  height: 100%;
+  width:100%;
+  background-color: #eee;
+}
+/*做的线*/
+.home_hot_line{
+  width:4rpx;
+  height:50rpx;
+  background-color:red;
+  position:absolute;
+  left:0rpx;
+  top:20rpx;
+}
+/*首页的输入框搜索栏  */
+/*
+.search_box{
+  height: 70rpx;
+  width: 100%;
+  background-color: #4fb06e;
+}
+.home_search{
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255, 255, 255, 0.23) ;
+}
+.home_search input{
+  height: 100%;
+  width:92%;
+  padding-left: 12%;
+  color: white;
+}
+.home_search image{
+  position: absolute;
+  top: 5rpx;
+  left: 2%;
+  width: 50rpx;
+  height: 50rpx;
+}
+*/
+/*首页的轮播图  */
+.first_carousel{
+  height: 460rpx;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.first_carousel swiper-item, .first_carousel swiper-item image{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+/*秒杀的那一栏  */
+/*
+.rob_now{
+  height: 420rpx;
+  width: 96%;
+  margin-left: 2%;
+  margin-bottom: 15rpx;
+  margin-top: 20rpx;
+  background-color: white;
+}
+.rob_text{
+  height: 70rpx;
+  margin-bottom: 12rpx;
+  line-height: 70rpx;
+  position: relative;
+}
+.rob_text>text:first-child{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.rob_text>text:last-child{
+  font-size: 32rpx;
+  position: absolute;
+  right: 50rpx;
+}
+.the_wordmore{
+  height: 100%;
+  float: left;
+}
+.the_triangle{
+float: right;
+  height: 0;
+  width: 0;
+  border-left: 30rpx solid #ccc;
+  border-top: 19rpx solid transparent;
+  border-bottom: 19rpx solid transparent;
+  margin-top: 16rpx;
+  margin-left: 15rpx;
+
+}
+.rob_box{
+  height: 330rpx;
+  width: 100%;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  white-space:nowrap;
+}
+.rob_content{
+  height: 100%;
+  width: 230rpx;
+  margin-right: 10rpx;
+  border-right: 1px solid #eee;
+  display: inline-block;
+}
+.rob_content image{
+  display: block;
+  width: 180rpx;
+  margin-left: 25rpx;
+  height: 230rpx;
+}
+.rob_name{
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 26rpx;
+  width: 180rpx;
+  margin-left: 25rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.rob_price{
+  height: 35rpx;
+  width: 180rpx;
+  margin-left: 25rpx;
+  line-height: 35rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+.rob_price text:first-child{
+  color: #F25;
+  margin-right: 2rpx;
+  font-size: 26rpx;
+}
+.rob_price text:nth-child(2){
+  color: #999;
+  text-decoration: line-through;
+  font-size: 22rpx;
+}*/
+
+/*扫码商城*/
+.home_scan{
+   height: 500rpx;
+   width: 100%;
+   position: relative;
+   top: -400rpx;
+}
+.home_scan_bg{
+   height: 100%;
+   width: 100%;
+}
+.home_scan_fixing{
+    height: 100px;
+    width: 30%;
+    position: absolute;
+    top: 300rpx;
+}
+.home_scan_fixing .scan_img1{
+    height: 80rpx;
+    width: 80rpx;
+    float: right;
+    margin-top: 30rpx;
+    margin-right: 20rpx;
+}
+.home_scan_fixing .scan_text1{
+    height:80rpx;
+    width: 100%;
+    position: absolute;
+    top: 130rpx;
+    left: 110rpx;
+    font-size: 30rpx;
+    color: #666;
+}
+.scan_put{
+    height: 100px;
+    width: 40%;
+    position: absolute;
+    top: 300rpx;
+    left: 30%;
+}
+.scan_put .scan_img2{
+    height: 120rpx;
+    width: 120rpx;
+    float: right;
+    margin-right: 80rpx;
+}
+.scan_put .scan_text2{
+    height:80rpx;
+    width: 100%;
+    position: absolute;
+    top: 130rpx;
+    left: 115rpx;
+    font-size: 30rpx;
+    color: #666;
+}
+.scan_mall{
+    height: 100px;
+    width: 30%;
+    position: absolute;
+    top: 300rpx;
+    right: 0px;
+}
+.scan_mall .scan_img3{
+    height: 80rpx;
+    width: 80rpx;
+    float: right;
+    margin-top: 30rpx;
+    margin-right: 80rpx;
+}
+.scan_mall .scan_text3{
+    height:80rpx;
+    width: 100%;
+    position: absolute;
+    top: 130rpx;
+    left: 70rpx;
+    font-size: 30rpx;
+    color: #666;
+}
+
+/*促销的那一栏  */
+.home_afford{
+  margin-top: 150rpx;
+  height: 770rpx;
+  background-color: white;
+}
+.home_afford>text {
+  height: 70rpx;
+  font-size: 34rpx;
+  line-height: 70rpx;
+  margin-left: 2%;
+  display: block;
+  width: 96%;
+}
+.home_afford view{
+  float: left;
+
+}
+.home_afford .home_first{
+  width: 49%;
+  height: 390rpx;
+  border-top: 1px solid #eee; 
+  text-align: center;
+  border-right: 1px solid #eee;
+
+}
+.first_bigtext{
+  margin-top: 24rpx;
+  font-size: 30rpx;
+  display: block;
+}
+.first_smalltext{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: red;
+  display: block;
+}
+.home_first image{
+  display: block;
+  width: 280rpx;
+  height: 280rpx;
+  margin-left: 47.5rpx;
+}
+.home_afford .home_two{
+  width: 50%;
+  height: 194rpx;
+  border-top: 1px solid #eee;
+  /* border-bottom: 2rpx solid #eee; */
+}
+.two_three{
+  float: left;
+  width: 180rpx;
+  height: 195rpx;
+  text-align: center;
+}
+.two_three text:first-child{
+  display: block;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+.two_three text:nth-child(2){
+  display: block;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: red;
+}
+.home_three image, .home_two image{
+  float: right;
+  width: 180rpx;
+  height: 185rpx;
+}
+.home_afford .home_three{
+  width: 50%;
+  height: 195rpx;
+  border-top: 1px solid #eee;
+}
+.home_afford .home_four{
+  width: 245rpx;
+  height: 310rpx;
+  margin-top: 5rpx;
+  border-top: 1px solid #eee;
+  text-align: center;
+  border-right:  1px solid #eee;
+  
+}
+.home_four text:first-child,.home_five text:first-child,.home_six text:first-child{
+  display: block;
+   margin-top: 20rpx;
+  font-size: 30rpx;
+}.home_four text:nth-child(2),.home_five text:nth-child(2),.home_six text:nth-child(2){
+   display: block;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: red;
+}
+.home_four image,.home_five image,.home_six image{
+  margin-top: 10rpx;
+  display: block;
+  height: 180rpx;
+  width: 180rpx;
+  margin-left: 35rpx;
+}
+.home_afford .home_five{
+  width: 245rpx;
+  height: 310rpx;
+  margin-top: 5rpx;
+  border-top: 1px solid #eee;
+  text-align: center;
+  border-right:  1px solid #eee;
+}
+.home_afford .home_six{
+  width: 250rpx;
+  margin-top: 5rpx;
+  height: 310rpx;
+  border-top: 1px solid #eee;
+  text-align: center;
+  
+}
+/*热销市场  */
+.home_hot{
+  margin-top: 15rpx;
+  position: relative;
+  top: -415rpx;
+  background-color: #eee;
+}
+.home_hot::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.home_hot>text{
+  height: 90rpx;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  background-color: #eee;
+  display: block;
+  padding-left: 30rpx;
+   /* margin-bottom: 8rpx;  */
+}
+.home_hot>view{
+  float: left;
+  width: 25%;
+  height: 220rpx;
+  padding-top: 12rpx;
+}
+.home_hot>view image{
+  height: 160rpx;
+  width: 160rpx;
+  display: block;
+  margin-left: 8rpx;
+  margin-top: 10rpx;
+}
+.home_hot>view text{
+  display: block;
+  font-size: 30rpx;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*猜你喜欢  */
+.guess_like{
+  background-color: #eee;
+}
+.guess_like::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.guess_like>text{
+  height: 90rpx;
+  font-size: 30rpx;
+  display: block;
+  line-height: 90rpx;
+  text-align: center;
+}
+.guess_like>view{
+  float: left;
+  width: 352rpx;
+  margin-left: 14rpx;
+  height: 620rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+.guess_like>view>image{
+  display: block;
+  width: 100%;
+  height: 490rpx;
+  margin-bottom: 5rpx;
+}
+.goodsname{
+  height: 65rpx;
+  font-size: 30rpx;
+  line-height: 65rpx;
+  
+}
+.goodsname text{
+  display: block;
+  height: 100%;
+  padding: 0 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:#50636d;
+}
+.goodsprice{
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: .28 rem;
+  font-weight: 700;
+  padding-left: 10rpx;
+  color: #333;
+}

@@ -1,0 +1,101 @@
+/* pages/address/newaddress.wxss */
+.newaddress_container{
+  height: 100%;
+}
+/*添加页面标题  */
+.title{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  width: 94%;
+  margin-left: 3%;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #999;
+}
+.cancle_add{
+  position: absolute;
+  height: 100%;
+  left: 36rpx;
+}
+.save_add{
+  position: absolute;
+  right: 36rpx;
+  height: 100%;
+}
+/*填写地址  */
+/*输入框的  */
+.write_address>view{
+  height: 96rpx;
+  width: 94%;
+  margin-left: 3%;
+  line-height: 96rpx;
+  border-bottom: 1px #eee solid;
+}
+.write_address>view text{
+  display: block;
+  float: left;
+  width: 25%;
+  font-size: 30rpx;
+  text-indent: 25rpx;
+  height: 100%;
+  position: relative;
+}
+.write_address>view text::after{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 60rpx;
+  top: 18rpx;
+  right: 10rpx;
+  border: 1px solid #eee;
+}
+.write_address>view input{
+  display: block;
+  float: left;
+  width: 74%;
+  height: 100%;
+  font-size: 30rpx;
+}
+/*选择器的  */
+.write_address>view picker{
+  display: block;
+  float: left;
+  width: 74%;
+  height: 100%;
+  font-size: 30rpx;
+}
+/*文本域的  */
+.write_address>.bigtext{
+  height: 160rpx;
+  width: 94%;
+  margin-left: 3%;
+  line-height: 50rpx;
+  border-bottom: 1px #eee solid;
+}
+.write_address>.bigtext text{
+  display: block;
+  float: left;
+  width: 25%;
+  font-size: 30rpx;
+  text-indent: 25rpx;
+  height: 100%;
+  line-height: 160rpx;
+  position: relative;
+}
+.write_address>.bigtext text::after{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 60rpx;
+  top: 45rpx;
+  right: 10rpx;
+  border: 1px solid #eee;
+}
+.write_address>.bigtext textarea{
+  display: block;
+  float: left;
+  width: 74%;
+  height: 100%;
+  font-size: 30rpx;
+}

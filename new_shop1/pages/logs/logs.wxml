@@ -1,0 +1,62 @@
+<!--pages/logs/logs.wxml-->
+<view class='container_logs'>
+<!--用户头像以及个人信息  -->
+<view class='user_head'>
+<image src="{{info.head_pic}}"></image>
+<view class='other_info'>
+<text>{{info.nickname}}</text>
+<view  bind:tap="add_address" class='{{mnbvcx=="请先登录"?"the_linedown write_address":"write_address"}}'>{{mnbvcx}}</view>
+</view>
+</view>
+<!--用户的订单  -->
+<view class='user_order'>
+<view class='order_prompt'>
+<text>我的订单</text>
+<text bindtap='jump_logsorder' data-num='0'>查看全部订单</text>
+</view>
+<view class='order_icon'>
+  <view bindtap='jump_logsorder'  data-num='WAITPAY'><image src='http://qn.yeshitou.com/daifukuan.png'></image><text>待付款</text></view>
+  <view bindtap='jump_logsorder'  data-num='2'><image src='http://qn.yeshitou.com/daichengtuan.png'></image><text>待成团</text></view>
+  <view bindtap='jump_logsorder'  data-num='WAITSEND'><image src='http://qn.yeshitou.com/daifahuo.png'></image><text>待发货</text></view>
+  <view bindtap='jump_logsorder'  data-num='WAITRECEIVE'><image src='http://qn.yeshitou.com/daishouhuo.png'></image><text>待收货</text></view>
+  <view bindtap='jump_logsorder'  data-num='WAITCCOMMENT'><image src='http://qn.yeshitou.com/shouhoufuwu.png'></image><text>待评价</text></view>
+</view>
+</view>
+<!--我的服务  -->
+<view class='user_service'>
+<view class='service_title'>我的服务</view>
+<view class='service_first'>
+  <!-- <view><image src='http://qn.yeshitou.com/优惠券.png'></image><text>优惠券</text></view>
+  <view><image src='http://qn.yeshitou.com/礼物.png'></image><text>礼物</text></view> -->
+  <view class='lkjhggfdsa'>
+  
+  <image src='http://qn.yeshitou.com/kefu.png'>
+  </image><text>客服</text>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  <contact-button session-from="weapp" class='the_weapp'bindtap='post_msgtype'></contact-button>
+  </view>
+  <view bindtap='jump_collect'><image src='http://qn.yeshitou.com/shoucang.png'></image><text>收藏</text></view>
+  <view bindtap='add_address'><image src='http://qn.yeshitou.com/dizhi.png'></image><text>地址</text></view>
+
+</view>
+<!-- <view class='service_second'>
+<view><image src='images/客服.png'></image><text>客服</text></view> -->
+  <!-- <view><image src='images/意见反馈.png'></image><text>意见反馈</text></view>
+  <view><image src='images/关于我们.png'></image><text>关于我们</text></view> -->
+  <!-- </view> -->
+</view>
+</view>

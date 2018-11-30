@@ -1,0 +1,258 @@
+/* pages/logs/logsorder.wxss */
+.logsorder_container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.logsorder_list{
+  background-color: #F5F5F5;
+}
+.logsorder_head{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background-color: white;
+  margin-bottom: 26rpx;
+  border-top: 1px solid #eee;
+}
+.logsorder_head text{
+  float: left;
+  height: 100%;
+  margin-left: 54rpx;
+}
+.select_list{
+  color: red;
+  border-bottom: 1px solid red;
+}
+/*没有商品订单的提示  */
+.listnumnull{
+  position: absolute;
+  top: 86rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background-color: #F5F5F5; 
+  text-align: center;
+}
+
+.listnumnull text{
+  font-size: 34rpx;
+  display: block;
+  top: 200rpx;
+  width: 100%;
+  text-align: center;
+  z-index: 10000;
+  background-color: white;
+
+}
+.listnumnull image{
+  border-top: 1px solid #eee;
+  width: 100%;
+  height: 400rpx;
+  display: block;
+  background-color: white;
+  
+}
+.shopcar_goods_box{
+  position: absolute;
+  top: 86rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+ 
+ 
+}
+.shopcar_goodslist{
+  background-color: #F5F5F5; 
+}
+.shopcar_goods_box>view:last-child{
+  /* margin-bottom: 100rpx; */
+  }
+/* /订单 */
+.logsorder_container .shopcar_goods{
+  margin-top: 26rpx;
+  border-top: 0.5px solid #e5e5e5;
+  border-bottom: 0.5px solid #e5e5e5;
+   background-color: white; 
+}
+.logsorder_container .shopcar_goods>view:first-child{
+  height: 70rpx;
+  font-size: 28rpx;
+  border-bottom: 0.5px solid #e5e5e5;
+  line-height: 70rpx;
+  text-align:  left;
+  background-color: #FFFFF0;
+}
+ .shopcar_goods>view:first-child text:first-child{
+    margin-left: 30rpx; 
+ }
+ .shopcar_goods>view:first-child text:nth-child(2){
+    margin-left: 100rpx; 
+   color: #ff5777;
+ }
+ .goodsbox{
+   height: 260rpx;
+   border-bottom:0.5px solid #e5e5e5;
+ }
+ .goodsbox>view{
+  float: left;
+  height: 100%;
+  
+ }
+
+
+ .goodsbox .goodsbox_img{
+   width: 22%;
+   height: 100%;
+   margin-left: 25rpx;
+   
+ }
+ .goodsbox .goodsbox_img image{
+   width: 100%;
+   height: 240rpx;
+   display: block;
+   margin-top: 10rpx;
+ }
+ .goodsbox .goodsbox_detail{
+   margin-left: 12rpx;
+  width: 68%;
+  
+ }
+  .goodsbox .goodsbox_detail>view:first-child{
+    margin-top: 10rpx;
+  }
+  .goodsname{
+    font-size: 28rpx;
+    height: 100rpx;
+    line-height: 50rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-align: left;
+  }
+  .goodsweight{
+    /* padding-top: 20rpx; */
+    height: 80rpx;
+    font-size: 26rpx;
+    line-height: 44px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    color:#999;
+  }
+  .goodsprice{
+    font-size: 32rpx;
+    margin-top: 10rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    position: relative;
+  }
+   .goodsprice text:first-child{
+    position: absolute;
+    height: 70rpx;
+    /* width: 100rp; */
+    color: #ff5777;
+     left: 0; 
+  }
+  .goodsprice text:nth-child(2){
+    position: absolute;
+    height: 70rpx;
+    width: 100rp;
+    right: 40rpx;
+  }
+  /*末尾  */
+  .theend{
+    height: 20rpx;
+    margin-bottom: 100rpx;
+  }
+  /*订单状态  */
+  .controll_order{
+    /* border-top: 0.5px solid #e5e5e5; */
+    height: 90rpx;
+    position: relative;
+    /* line-height: 80rpx; */
+  }
+  .controll_order text{
+    float: left;
+    padding: 10rpx 14rpx;
+    font-size: 28rpx;
+    margin-top: 5rpx;
+    
+  }
+  .controll_order .cancle_order{
+    top: 12rpx;
+    position: absolute;
+    right: 200rpx;
+    border: 0.5px solid #e5e5e5;
+    border-radius:0.15rem;
+    
+  }
+    .controll_order .comfire_order{
+      top: 14rpx;
+    position: absolute;
+    right: 20rpx;
+    color: white;
+    background-color: #ff5777;
+    border-radius:0.15rem;
+    
+  }  
+  .controll_order .connect_order{
+    margin: 0;
+    padding:0;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius:0.15rem;
+  }
+    .controll_order .comment_order{
+   top: 12rpx;
+    position: absolute;
+    right: 60rpx;
+    border: 0.5px solid #e5e5e5;
+    border-radius:0.15rem;
+    background-color: #ff5777;
+    color: white;
+
+    
+  }
+      .controll_order .comment_send{
+top: 12rpx;
+    position: absolute;
+    right: 200rpx;
+    border: 0.5px solid #e5e5e5;
+    border-radius:0.15rem;
+    
+  }
+  .comment_send123{
+    top: 12rpx;
+    position: absolute;
+color:white;
+    right: 16rpx;
+    border: 1px solid #e5e5e5;
+    background-color:#ff5777;
+    border-radius:2px;
+  }
+       .controll_order .comment_cancle{
+top: 12rpx;
+    position: absolute;
+    right: 60rpx;
+    border: 0.5px solid #e5e5e5;
+    border-radius:0.15rem;
+    
+  }
+  .comment_cancle111{
+    top: 12rpx;
+    position: absolute;
+    right: 60rpx;
+    border: 0.5px solid #e5e5e5;
+    border-radius:0.15rem;
+    background-color: #ff5777;
+    color: white;
+  }

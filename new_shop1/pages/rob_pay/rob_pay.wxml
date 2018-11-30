@@ -1,0 +1,34 @@
+<!--pages/rob_pay/rob_pay.wxml-->
+<view class='rob_contain'>
+<swiper class='rob_carousel'  autoplay="{{true}}" circular="{{true}}"indicator-dots = "{{true}}" >
+<swiper-item wx:for="{{first_carousel}}" wx:key="{{index}}" current="{{current}}" ><image src='{{item.img}}'/> </swiper-item>
+</swiper>
+ <scroll-view scroll-x class='the_father'  scroll-with-animation="{{true}}">
+    <view bindtap='jump_change' wx:for="{{the_timeline}}" data-num='{{item}}' class='{{the_selectedNum==item.font?"child_color the_child":"the_child"}}'>{{item.font}}
+    <text wx:if='{{item.end_time<=time_now}}'>已开抢</text>
+    <text wx:if='{{time_now<=item.end_time&&time_now>=item.start_time}}'>立即抢购</text>
+    <text wx:if='{{time_now<=item.start_time}}'>即将开抢</text>
+    </view>
+    
+  </scroll-view>
+   <view class='the_timeless' wx:if="{{clock != '已经截止'}}">{{the_selectedNum}}快抢 · 距{{the_name}}:{{clock}}</view> 
+  <view class='the_timeless' wx:if="{{clock == '已经截止'}}">已经截止</view>
+  <view class='goods_list'>
+  <view class='goods_content' wx:for="{{goods_list}}" data-num="{{item}}"bindtap='jump_robdetail'>
+    <image src='{{item.original_img}}'></image>
+    <view>
+    <view class='goods_title'>{{item.goods_name}}</view>
+    <view class='goods_desc'>{{item.description}}</view>
+    <view class='goods_status'>已抢购{{item.buy_num}}<text>库存剩余:{{item.store_count}}</text></view>
+    <!-- <view class='goods_num'></view> -->
+    <view class='goods_price'><text>¥{{item.shop_price}}</text><text>¥{{item.market_price}}</text></view>
+     <view class='rob_now'>{{the_now_buy_is}}</view>
+    <!-- <view class='rob_now' wx:if='{{item.end_time<=time_now}}'>已开抢</view>
+     <view class='rob_now' wx:if='{{time_now<=item.end_time&&time_now>=item.start_time}}'>立即抢购</view> 
+      <view class='rob_now' wx:if='{{time_now<=item.start_time}}'>即将开抢</view>   -->
+    </view>
+  </view>
+  <view class='the_more_choose'>更多商品</view>
+  <view class='the_prompt_more' wx:if='{{goods_list.length ==0}}'>当前没有抢购商品</view>
+  </view>
+ </view>

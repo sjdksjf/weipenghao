@@ -1,0 +1,109 @@
+/* pages/address/address.wxss */
+.address_container{
+  height: 100%;
+    background-color: #eee;
+  
+  }
+  .address_container>view{
+    background-color: #eee;
+  }
+  /*添加新的地址  */
+  .address_foot{
+    position: fixed;
+    width: 92%;
+    left: 4%;
+    bottom: 40rpx;
+    height: 80rpx;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 36rpx;
+    border-radius: 9rpx;
+  }
+  /*地址列表  */
+  .selected_bool{
+    width: 94%;
+    margin-left: 3%;
+    box-shadow: 5rpx 5rpx 5rpx 5rpx #ccc;
+    margin-bottom: 20rpx;
+    margin-top: 26rpx;
+    background-color: white;
+  }
+  .selected_bool view{
+    height: 60rpx;
+    line-height: 60rpx;
+    position: relative;
+  }
+  .username>text{
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space:  nowrap;
+    overflow: hidden;
+  }
+  .username>text:first-child{
+    left: 25rpx;
+    width: 60%;
+    
+  }
+  .username>text:nth-child(2){
+    right: 0;
+    width: 40%;
+  }
+  .selfaddress{
+    margin-top: 10rpx;
+    font-size: 32rpx;
+    padding-left: 25rpx;
+  }
+   .writeaddress{
+    margin-top: 10rpx;
+    font-size: 32rpx;
+    padding-left: 25rpx;
+    border-bottom: 1px solid #eee;
+  }
+  .thechange{
+    position: relative;
+    font-size: 32rpx;
+  }
+  .thechange image{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    left: 15rpx;
+    top: 1rpx;
+    border: 2rpx solid #eee;
+    border-radius: 50%;
+  }
+  .thechange text:nth-child(2){
+    position: absolute;
+    left: 78rpx;
+  }
+  .thechange text:nth-child(3){
+    position: absolute;
+    right: 200rpx;
+  }
+  .thechange text:nth-child(4){
+    position: absolute;
+    right: 100rpx;
+  }
+  .theend{
+    height: 100rpx;
+    margin-bottom: 30rpx;
+  }
+
+  .the_addressnull{
+    height: 500rpx;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #eee;
+  }
+  .the_addressnull image{
+    height: 370rpx;
+    width: 100%;
+  }
+  .the_addressnull text{
+    line-height: 70rpx;
+    display: block;
+    text-align: center;
+    font-size: 30rpx;
+  }

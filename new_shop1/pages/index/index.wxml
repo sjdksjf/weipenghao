@@ -1,0 +1,110 @@
+<!--index.wxml-->
+<view class="container_home">
+<!--首页搜索框  -->
+<!--
+<view class='search_box'>
+    <view class='home_search'>
+      <image src='images/search.png'></image> <input placeholder='输入需要进行的数据'></input>
+    </view> 
+</view>  -->    
+<!--轮播图  -->
+<swiper class='first_carousel'  autoplay="{{true}}" circular="{{true}}"indicator-dots = "{{true}}" >
+<swiper-item wx:for="{{first_carousel}}" wx:key="{{index}}" current="{{current}}" data-num="{{item}}" bindtap='jump_other_page'><image src='{{item.img}}'/> </swiper-item>
+</swiper>
+
+
+<!--秒杀部分 
+<view class='rob_now'>
+<view class='rob_text'>
+<text>{{the_selectedNum}}快抢 · 距{{the_name}}:{{clock}}</text>
+<text bindtap='jump_rub'>
+  <text class='the_wordmore'>MORE</text>
+  <text class='the_triangle'></text>
+  </text>
+</view>
+<view class='rob_box'>
+<view class='rob_content' wx:for="{{goods_list}}"  wx:key=""  data-num="{{item}}"bindtap='jump_robdetail'><image src='{{item.original_img}}'></image><view class='rob_name'>{{item.goods_name}}</view><view class='rob_price'><text>¥{{item.shop_price}}</text><text>¥{{item.market_price}}</text></view></view>
+<!-- <view class="rob_content"><image src='http://qn.yeshitou.com/pic1.webp'></image><view class='rob_name'>初冬爆款</view><view class='rob_price'><text>¥49</text><text>¥99</text></view></view>
+<view class="rob_content"><image src='http://qn.yeshitou.com/pic2.webp'></image><view class='rob_name'>新版型风衣</view><view class='rob_price'><text>¥108</text><text>¥199</text></view></view>
+<view class="rob_content"><image src='http://qn.yeshitou.com/pic3.webp'></image><view class='rob_name'>高段位文艺</view><view class='rob_price'><text>¥60</text><text>¥90</text></view></view>
+<view class="rob_content"><image src='http://qn.yeshitou.com/pic4.webp'></image><view class='rob_name'>最新款卫衣</view><view class='rob_price'><text>¥68</text><text>¥157</text></view></view>
+<view class="rob_content"><image src='http://qn.yeshitou.com/pic5.webp'></image><view class='rob_name'>秋日暖套装</view><view class='rob_price'><text>¥39</text><text>¥87</text></view></view>
+<view class="rob_content"><image src='http://qn.yeshitou.com/pic6.webp'></image><view class='rob_name'>小个子专属</view><view class='rob_price'><text>¥46</text><text>¥78</text></view></view>
+
+</view>
+</view>
+-->
+<!-- 扫码商城按钮 -->
+<view class='home_scan'>
+     <image class='home_scan_bg' src='images/2.png'></image>
+     <view class='home_scan_fixing'>
+        <image class='scan_img1' src='images/5.png'></image>
+        <text class='scan_text1'>附近设备</text>
+     </view>
+      <view class='scan_put'>
+        <image class='scan_img2' src='images/4.png'></image>
+        <text class='scan_text2'>扫一扫</text>
+     </view>
+      <view class='scan_mall' bindtap='jumpmall'>
+        <image class='scan_img3' src='images/3.png'></image>
+        <text class='scan_text3'>商城</text>
+     </view>
+</view>
+
+<!-- 超实惠部分 -->
+<!--
+<view class='home_afford'>
+<text>超实惠-促销直达</text>
+<view class='home_first' bindtap='jump_jump' data-num='{{six_and_six[0].id}}'>
+<text class='first_bigtext'>{{six_and_six[0].name1[0]}}</text>
+<text class='first_smalltext'>{{six_and_six[0].name1[1]}}</text>
+<image src='{{six_and_six[0].img}}'></image>
+</view>
+<view class='home_two'bindtap='jump_jump'data-num='{{six_and_six[1].id}}'>
+<view class='two_three'>
+<text >{{six_and_six[1].name1[0]}}</text>
+<text >{{six_and_six[1].name1[1]}}</text>
+</view>
+<image src='{{six_and_six[1].img}}'></image>
+</view>
+<view class='home_three'bindtap='jump_jump'data-num='{{six_and_six[2].id}}'>
+<view class='two_three'>
+<text >{{six_and_six[2].name1[0]}}</text>
+<text >{{six_and_six[2].name1[1]}}</text>
+</view>
+
+<image src='{{six_and_six[2].img}}'></image></view>
+<view class='home_four'bindtap='jump_jump'data-num='{{six_and_six[3].id}}'>
+<text >{{six_and_six[3].name1[0]}}</text>
+<text>{{six_and_six[3].name1[1]}}</text>
+<image src='{{six_and_six[3].img}}'></image></view>
+<view class='home_five'bindtap='jump_jump'data-num='{{six_and_six[4].id}}'>
+<text >{{six_and_six[4].name1[0]}}</text>
+<text >{{six_and_six[4].name1[1]}}</text>
+<image src='{{six_and_six[4].img}}'></image></view>
+<view class='home_six'bindtap='jump_jump'data-num='{{six_and_six[5].id}}'>
+<text >{{six_and_six[5].name1[0]}}</text>
+<text >{{six_and_six[5].name1[1]}}</text>
+<image src='{{six_and_six[5].img}}'></image></view>
+</view> -->
+<view class='home_hot'>
+  <text>
+      <text class='home_hot_line'></text>热门市场
+  </text>
+  <view wx:for="{{class_bigdata}}" wx:key=""  bindtap='goodslist' data-classid='{{item}}'><image src='{{item.cate2[1].image}}'></image>
+<text>{{item.cate2[1].name}}</text>
+</view>
+</view>
+<!--猜你喜欢 -->
+<view class='guess_like'>
+<text>猜你喜欢</text>
+<view wx:for="{{cainixihuan}}" bindtap='jumpdetail' data-detail='{{item.goods_id}}'> 
+<image src='{{item.original_img}}'></image>
+<view class='goodsname'><text>{{item.goods_name}}</text></view>
+<view class='goodsprice'>¥{{item.shop_price}}</view>
+
+</view>
+
+</view>
+
+</view>

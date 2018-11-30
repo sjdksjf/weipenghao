@@ -1,0 +1,32 @@
+<!--pages/logs/order_comment.wxml-->
+<view class='content_container'>
+<view class='write_comment'>
+发表评论
+</view>
+<!-- <view class='star_num'>
+<text>描述相符</text>
+<view class='controll_star' >
+<image src='{{starNum>=1?"images/star1.png":"images/star0.png"}}' data-num="1" bindtap='change_star'></image>
+<image src='{{starNum>=2?"images/star1.png":"images/star0.png"}}' data-num="2"bindtap='change_star'></image>
+<image src='{{starNum>=3?"images/star1.png":"images/star0.png"}}' data-num="3"bindtap='change_star'></image>
+<image src='{{starNum>=4?"images/star1.png":"images/star0.png"}}' data-num="4"bindtap='change_star'></image>
+<image src='{{starNum>=5?"images/star1.png":"images/star0.png"}}' data-num="5"bindtap='change_star'></image>
+
+</view>
+<view class='the_stardetail' hidden='{{starNum!=1}}'>非常差</view>
+<view class='the_stardetail'hidden='{{starNum!=2}}'>差</view>
+<view class='the_stardetail'hidden='{{starNum!=3}}'>一般</view>
+<view class='the_stardetail'hidden='{{starNum!=4}}'>好</view>
+<view class='the_stardetail'hidden='{{starNum!=5}}'>非常好</view>
+</view> -->
+<!--发表评论  -->
+<view class='the_word'>
+<textarea placeholder='说说你的使用心得,分享给想买的他们吧' bindinput="get_word"></textarea></view>
+<!-- <view class='is_username'>
+<image src='{{is_name==0?"images/choose0.png":"images/choose1.png"}}' bindtap='change_choose'></image>
+<text>选中</text>
+ <view class='is_name0' hidden='{{is_name==1}}'>你的评价能帮助其他小伙伴</view>
+<view class='is_name1'hidden="{{is_name==0}}">你写的评论会以匿名的形式呈现</view>
+</view> -->
+<view class='comment_foot' bindtap='commit_userword'>发表评论</view>
+</view>

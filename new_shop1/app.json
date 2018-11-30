@@ -1,0 +1,60 @@
+{
+  "pages":[
+    "pages/placeOrder/placeOrder",
+    "pages/index/index",
+    "pages/classification/classification",
+    "pages/classification/classlist",
+    "pages/shopcar/shopcar",
+    "pages/shopcar/selforder",
+    "pages/logs/logs",
+    "pages/logs/logsorder",
+    "pages/binding/binding",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/address/newaddress",
+    "pages/address/changeaddress",
+    "pages/logs/orderdetail",
+    "pages/rob_pay/rob_pay",
+    "pages/rob_pay/rob_detail",
+    "pages/collect/collect",
+    "pages/search/search",
+    "pages/logs/order_comment",
+    "pages/order/order_status",
+    "pages/play/play",
+    "pages/mall/mall",
+    "pages/londing/londing"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4fb06e",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+          "selectedColor": "#4fb06e",        
+    "list":[{
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"utils/images/home.png",
+        "selectedIconPath": "utils/images/home1.png"
+      },{
+        "pagePath":"pages/shopcar/shopcar",
+        "text":"购物车",
+        "iconPath": "utils/images/shopcar.png",
+        "selectedIconPath":"utils/images/shopcar1.png"
+      },
+      {
+        "pagePath": "pages/placeOrder/placeOrder",
+        "text": "快速下单",
+        "iconPath": "utils/images/class.png",
+        "selectedIconPath": "utils/images/class1.png"
+      },{
+        "pagePath":"pages/logs/logs",
+        "text":"个人中心",
+        "iconPath": "utils/images/user.png",
+        "selectedIconPath":"utils/images/user1.png"
+      }]
+
+        
+  }
+}

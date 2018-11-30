@@ -1,0 +1,74 @@
+<!--pages/classification/classification.wxml-->
+<view class='class_container'>
+<!-- <view class='home_search'><image src='../index/images/search.png'></image> <input placeholder='输入需要进行的数据'></input></view> -->
+<view class='classify_all'>
+<scroll-view class='classify_left' scroll-y="{{true}}">
+<view wx:for="{{show_alldata}}"
+ wx:key="{{item.id}}"
+ data-id='{{item.id}}' id='{{item.id}}'
+class="{{left_classnum==index?'view_left viewleft1':''}}" data-num='{{index}}' bindtap='change_leftnum'>{{item.cate_name}}</view> 
+</scroll-view>
+<view class='classify_right'>
+<view wx:for="{{show_all}}"
+ wx:key="{{item.container_id}}"
+ data-id='{{item.container_id}}' id='{{item.container_id}}'
+class="viex1" data-num='{{index}}' bindtap='jumpselect'>
+    <image src='{{item.goods_img}}'></image>
+    <view class='name_price'>
+       <text class='text1' >{{item.goods_name}}</text>
+       <text class='text2'  bindtap='gainId' >¥ {{item.price}}</text>
+    </view>
+    <view class='add_minus'> 
+          <view class='img1' bindtap="addCount" data-index="{{index}}">+</view>
+            <text>{{ item.shop_num }}</text>
+          <view class='img2' bindtap="minusCount" data-index="{{index}}" id='goods_{{item.container_id}}'>-</view>
+       
+     </view>
+   </view>
+</view>
+</view>
+    
+    <!--购物车-->    
+    <view class='foot_buy'>
+        <view class='shopping_cart' bindtap='buy_cart'>
+        <image class='img3' bindtap='switchMask' src='./images/1.png'></image>
+        <text class='text3'>¥ {{ total_price ? total_price : 0 }}</text>
+        <text class='text4'>共计： <text style='color:red;font-weight:800;'>{{ total_num ? total_num : 0  }}</text>件商品</text>
+        </view>
+        <button class='btn' bindtap='buy_now'>支付</button>
+    </view>   
+</view>
+
+<!--蒙版-->
+<view class='class_container1' hidden='{{!setList}}' catchtap='closeMash'>
+    <view class='foot_list' catchtap='switchMask' data-mak='switchMask'>
+    <view wx:for="{{shows_all}}"
+ wx:key="{{item.containers_id}}"
+ style='height: 46px; border-top: 1px solid #e3e3e3; background-color: white;'
+hidden='{{!hasList}}'
+class='viex2 {{item.shop_num == 0 ? "listNone":"listBlock" }}'
+ data-id="{{item.containers_id}}" id="{{item.containers_id}}"
+ data-num='{{index}}' bindtap='jumpselect'>
+
+        <view class='all_left'>
+          <text class='text5' >{{item.goods_name}}</text>
+          <!-- <text class='text6'  bindtap='gainId' >$ {{item.price}}</text> -->
+        </view>
+        <view class='all_senter'>
+          <text class='text6'  bindtap='gainId' >¥{{item.price}}</text>
+        </view>
+        <view class='all_right'>
+
+              <view class='foot_text1' catchtap="shop_minusCount" data-index="{{index}}" id='{{item.containers_id}}'>-</view>
+                <view class='foot_text3'>{{ item.shop_num }}</view>
+              <view  class='foot_text2' catchtap="shop_addCount" data-index="{{index}}" id='{{item.containers_id}}'>+</view>
+          
+        </view>
+   </view>
+
+</view>
+    
+ 
+</view>
+
+

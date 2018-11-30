@@ -1,0 +1,20 @@
+<!--pages/collect/collect.wxml-->
+<view class='collect_container'>
+<view>
+<view class='collect_head'>
+<!-- <image src='../binding/images/back.png' bindtap='back'></image> -->
+商品收藏
+</view>
+<view class='goods_list'>
+  <view class='goods_content' wx:for="{{goods_list}}" bindtap='jump_detail' data-num="{{item.goods_id}}">
+    <image src='{{item.original_img}}'></image>
+    <view>
+    <view class='goods_title'>{{item.goods_name}}</view>
+    <view class='goods_desc'>{{}}</view>
+    <view class='goods_num'><text></text></view>
+    <view class='goods_price'><text>¥{{item.shop_price}}</text></view>
+    </view>
+  </view>
+  </view>
+</view>
+</view>

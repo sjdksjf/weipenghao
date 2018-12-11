@@ -1,9 +1,0 @@
-<!--pages/binding/binding.wxml-->
-<view>
-  <view class='head_title'><image src='images/back.png' bindtap='backbefore'></image>绑定手机页面</view>
-  <view class='user_mobile'><label>手机号:</label><input class='self_phone' bindblur='getphone' type='number' placeholder='请输入手机号' bindinput='getphonenum' maxlength='11'></input></view>
-  <view class='user_sms'><label>验证码:</label><input placeholder='输入验证码' bind:blur="getsms" type='number'maxlength='6' ></input> <button bind:tap="send_sms" disabled='{{!phone || !mobile_length || sms_bool}}'>{{sms_name}}</button></view>
- <view class='mobile_num' hidden="{{mobile_length}}">请输入11位有效手机号码</view>
-  
-  <button bind:tap="bindphone" class='comfirm_bind'>确认绑定</button>
-</view>
